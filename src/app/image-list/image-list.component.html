@@ -1,0 +1,32 @@
+
+  <div class="input-group">
+    <div class="form-outline">
+      <input type="search" id="form1" placeholder="Search for images" [(ngModel)]="searchQuery" class="form-control" />
+      
+    </div>
+    <button type="button" (click)="searchImages(searchQuery)" class="btn btn-primary">
+      <i class="fas fa-search"> Find Images</i>
+    </button>
+  </div>
+
+
+  <br>
+  <h4 *ngIf="imagesFound" style="font-family:Fredoka One" >Results</h4>
+  <br>
+  <div class="card-columns mx-5">
+   
+        <div *ngFor="let image of images" class="card" style="margin: 20px; ">
+          <a href="{{ image.pageURL }}" target="_bank">
+           
+            <img class="card-img-top" src="{{image.webformatURL}}">
+            <div class="card-body">
+                <h5 class="card-title">{{ image.user }}</h5>
+              <p class="card-text">Tags: {{ image.tags }}</p>
+              <p class="card-text">Comments: {{ image.comments }}</p>
+              <p class="card-text">Likes: {{ image.likes }}</p>
+            </div>
+          </a>
+        </div>
+      
+    </div>
+  <br><br>

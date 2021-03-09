@@ -24,6 +24,8 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -87,6 +89,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -120,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "ImageSearchApplication"
+  "defaultProject": "ImageSearchApplication",
+  "cli": {
+    "analytics": "f08ff2e1-bea0-409c-8cb8-bb0297954339"
+  }
 }
